@@ -2,7 +2,8 @@
 
 **All-In-Notes** is a modern iOS application designed for effortless and organized note-taking. Go beyond plain text—add **rich formatting**, utilize powerful **tagging**, and instantly **search** across your notes and tags. Experience note-taking like never before with smooth, engaging **Swift animations**!
 
-https://github.com/user-attachments/assets/4ada075c-e915-42da-8a62-768f5e50a564
+https://github.com/user-attachments/assets/55f16411-37a3-4457-bcef-4ab36f26edc5
+
 
 ---
 
