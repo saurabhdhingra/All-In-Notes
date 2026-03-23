@@ -8,11 +8,34 @@
 import SwiftUI
 
 struct NoteContentBlockView: View {
+    let content: NoteContentBlock
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        switch content {
+        case .plain(let text):
+            Text(text)
+                .font(.body)
+                .foregroundColor(.primary)
+                .padding(.vertical, 4)
+            
+        case .highlighted(let text):
+            HStack(alignment: .top, spacing: 8) {
+                RoundedRectangle(cornerRadius: 2)
+                    .fill(Color.indigo)
+                    .frame(width: 4)
+            Text(text)
+                    .font(.body)
+                    .foregroundColor(.primary)
+            }
+            .padding(.vertical, 4)
+            
+        case .image(let name):
+            Image(name)
+                .resizable()
+                .scaledToFit()
+                .cornerRadius(12)
+                .padding(.vertical, 8)
+        }
     }
 }
 
-#Preview {
-    NoteContentBlockView()
-}

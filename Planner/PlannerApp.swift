@@ -6,12 +6,20 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct PlannerApp: App {
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AllNotesView()
         }
+        .modelContainer(for: [
+            Note.self,
+            ContentBlock.self,
+            MediaAttachment.self,
+            Tag.self
+        ])
     }
 }
